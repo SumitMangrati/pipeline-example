@@ -6,11 +6,19 @@ pipeline {
 
         stage("Compile"){
 
+            steps{
+            
             sh 'javac Test.java'
+            
+            }
+
         }
         stage("run"){
 
-            sg 'java Test'
+            steps{
+
+                sh 'java Test'
+            }
         }
     }
 }
